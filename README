@@ -1,0 +1,8 @@
+# Setup Python path to find modules
+export PYTHONPATH=.
+
+
+# Run the workers
+celery --config=celeryconfig -A vtk.r  worker -Q r-queue
+celery --config=celeryconfig -A vtk.python  worker -Q python-queue
+
